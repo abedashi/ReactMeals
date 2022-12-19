@@ -13,14 +13,14 @@ const Cart = ({ onClose }) => {
   };
 
   const cartItemAddHandler = (item) => {
-    return context.addItem(item);
+    return context.addItem({ ...item, amount: 1 });
   };
 
   const totalAmount = `$${context.totalAmount.toFixed(2)}`;
   const hasItems = context.items.length > 0;
 
   const cartItems = (
-    <ul className={classes["cart-items "]}>
+    <ul className={classes["cart-items"]}>
       {context.items.map((item) => (
         <CartItem
           key={item.id}
