@@ -30,7 +30,7 @@ const MealItemForm = ({ id, onAddToCart }) => {
         ref={amountInputRef}
         label="Amount"
         input={{
-          id: id,
+          id: `amount_${id}`,
           type: "number",
           min: "1",
           max: "5",
